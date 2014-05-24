@@ -1,0 +1,17 @@
+
+#wget http://10.1.0.163:8000/temp/k/m0123456789degF.raw
+
+
+dd bs=600 if=m0123456789degF.raw count=163 skip=0 of=blank.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=128 of=minus.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=291 of=0.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=454 of=1.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=617 of=2.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=780 of=3.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=943 of=4.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=1106 of=5.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=1269 of=6.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=1432 of=7.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=1595 of=8.raw
+dd bs=600 if=m0123456789degF.raw count=163 skip=1758 of=9.raw
+dd bs=600 if=m0123456789degF.raw count=310 skip=1921 of=deg_F.raw

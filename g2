@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for R in `seq 0 1 799`; do
+ echo -ne 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\xFF\xFF'\
+ | dd bs=600 seek=$R of=/dev/fb0 2> /dev/null
+done
+
+tail -n 800 /var/tmp/thermometer.log|awk -v P=$1 -v m=$2 -v M=$3 '{Y=($(P)-m)*100/(M-m);Y=(Y<0) ? 0 : ( (Y>100)?100:Y);printf("echo -ne \"\xFF\xFF\xFF\xFF\xFF\"|dd bs=1 seek=%i of=/dev/fb0 2> /dev/null\n",(FNR-1)*600+Y)}'|sh
+eips ''

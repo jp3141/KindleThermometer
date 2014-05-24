@@ -1,0 +1,4 @@
+lipc-set-prop com.lab126.powerd preventScreenSaver 1
+killall -stop Xorg cvm 2>/dev/null # pause framework
+spoxbrane # draw stuff on framebuffer
+killall -cont cvm Xorg 2>/dev/null # resume framework

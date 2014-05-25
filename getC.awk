@@ -1,5 +1,5 @@
 END { # displays -dd or 1dd
-T = int(T-32)*5/9 + 0.5)
+T = int((T-32)*5/9 + 0.5)
 if (T < 0) {
   T = -T
   firstPos = "minus"

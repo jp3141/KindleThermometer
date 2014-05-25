@@ -11,7 +11,7 @@ if [ $1 -eq 105 ]; then cp getF.awk getT.awk; fi
 
 
 # UP key
-if [ $1 -eq 103 ]; then ./graph 9 -50 50; exit 0; fi
+if [ $1 -eq 103 ]; then ./graph.sh 0 100; exit 0; fi
 
 # top right button (broken button on K2)
 if [ $1 -eq 109 ]; then /etc/init.d/wifid stop; fi

@@ -9,5 +9,6 @@ tens = int(T/10) % 10
 if (T < 10) tens = "blank"
 units = T % 10
 printf("dd if=/dev/zero bs=1 count=480 2> /dev/null | cat - %s.raw %s.raw %s.raw deg_F.raw > /dev/fb0\n", firstPos, tens, units)
-printf("./bitblt CurrentKindleTemperature.rXY 550 0");
+printf("./bitblt CurrentKindleTemperature.rXY 550 0\n");
+printf("./graph.sh 50 110i\n");
 }
